@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-square.png";
 
 const Header = () => {
   const location = useLocation();
@@ -23,8 +23,9 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
         <nav className="flex items-center justify-between h-20">
-          <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
+          <Link to="/" className="flex items-center hover:opacity-80 transition-opacity gap-2">
             <img src={logo} alt="Ronald Follong Fotografie" className="h-12" />
+            <p className="font-black text-lg uppercase text-foreground -ml-6 tracking-tighter">Ronald Follong</p>
           </Link>
 
           {/* Desktop Navigation */}
