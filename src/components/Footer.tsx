@@ -1,4 +1,4 @@
-import { Mail, Phone } from "lucide-react";
+import { Mail, Phone, Facebook, Linkedin, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -48,6 +48,35 @@ const Footer = () => {
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Phone size={16} className="text-primary" />
                 <span>+31 6 12345678</span>
+              </div>
+              <div className="flex items-center gap-3 mt-4">
+                <a 
+                  href="https://www.facebook.com/ronald.follong" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                  aria-label="Facebook"
+                >
+                  <Facebook size={20} />
+                </a>
+                <a 
+                  href="https://nl.linkedin.com/in/ronald-follong-08a34b33" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin size={20} />
+                </a>
+                <a 
+                  href="https://www.instagram.com/ronaldfollong/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                  aria-label="Instagram"
+                >
+                  <Instagram size={20} />
+                </a>
               </div>
             </div>
           </div>

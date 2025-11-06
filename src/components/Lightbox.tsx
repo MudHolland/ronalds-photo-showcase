@@ -31,9 +31,12 @@ const Lightbox = ({ images, initialIndex, onClose }: LightboxProps) => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-background/98 flex flex-col">
+    <div 
+      className="fixed inset-0 z-50 bg-black/95 flex flex-col"
+      onClick={onClose}
+    >
       {/* Header */}
-      <div className="flex items-center justify-between p-4 border-b border-border">
+      <div className="flex items-center justify-between p-4 border-b border-border" onClick={(e) => e.stopPropagation()}>
         <span className="text-sm text-muted-foreground">
           {currentIndex + 1} / {images.length}
         </span>
@@ -47,7 +50,8 @@ const Lightbox = ({ images, initialIndex, onClose }: LightboxProps) => {
         <img
           src={images[currentIndex]}
           alt={`Image ${currentIndex + 1}`}
-          className="max-w-full max-h-full object-contain"
+          className="max-w-full max-h-[calc(100vh-200px)] object-contain"
+          onClick={(e) => e.stopPropagation()}
         />
 
         {/* Navigation Arrows */}
@@ -55,7 +59,10 @@ const Lightbox = ({ images, initialIndex, onClose }: LightboxProps) => {
           variant="ghost"
           size="icon"
           className="absolute left-4 top-1/2 -translate-y-1/2 bg-background/20 hover:bg-background/40 backdrop-blur-sm"
-          onClick={goToPrevious}
+          onClick={(e) => {
+            e.stopPropagation();
+            goToPrevious();
+          }}
         >
           <ChevronLeft className="h-6 w-6" />
         </Button>
@@ -64,14 +71,17 @@ const Lightbox = ({ images, initialIndex, onClose }: LightboxProps) => {
           variant="ghost"
           size="icon"
           className="absolute right-4 top-1/2 -translate-y-1/2 bg-background/20 hover:bg-background/40 backdrop-blur-sm"
-          onClick={goToNext}
+          onClick={(e) => {
+            e.stopPropagation();
+            goToNext();
+          }}
         >
           <ChevronRight className="h-6 w-6" />
         </Button>
       </div>
 
       {/* Thumbnail Strip */}
-      <div className="border-t border-border p-4 overflow-x-auto">
+      <div className="border-t border-border p-4 overflow-x-auto" onClick={(e) => e.stopPropagation()}>
         <div className="flex gap-2 justify-center">
           {images.map((image, index) => (
             <button
