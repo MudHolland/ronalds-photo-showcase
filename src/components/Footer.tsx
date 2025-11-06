@@ -54,7 +54,7 @@ const Footer = () => {
                   href="https://www.facebook.com/ronald.follong" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-primary transition-colors"
+                  className="hover:text-muted-foreground text-primary transition-colors"
                   aria-label="Facebook"
                 >
                   <Facebook size={20} />
@@ -63,7 +63,7 @@ const Footer = () => {
                   href="https://nl.linkedin.com/in/ronald-follong-08a34b33" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-primary transition-colors"
+                  className="hover:text-muted-foreground text-primary transition-colors"
                   aria-label="LinkedIn"
                 >
                   <Linkedin size={20} />
@@ -72,7 +72,7 @@ const Footer = () => {
                   href="https://www.instagram.com/ronaldfollong/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-primary transition-colors"
+                  className="hover:text-muted-foreground text-primary transition-colors"
                   aria-label="Instagram"
                 >
                   <Instagram size={20} />

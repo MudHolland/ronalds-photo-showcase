@@ -70,8 +70,8 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="bg-card border border-border rounded-lg p-6">
-                  <h3 className="font-semibold text-foreground mb-3">Openingstijden</h3>
+                <div className="bg-card border border-border rounded-lg p-6  leading-relaxed space-y-4 text-muted-foreground">
+                  {/* <h3 className="font-semibold text-foreground mb-3">Openingstijden</h3>
                   <div className="space-y-2 text-sm">
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Maandag - Vrijdag</span>
@@ -85,7 +85,11 @@ const Contact = () => {
                       <span className="text-muted-foreground">Zondag</span>
                       <span className="text-foreground">Gesloten</span>
                     </div>
-                  </div>
+                  </div> */}
+                  <p>Als u geen aansluiting met mij krijgt ben ik even niet instaat om u te woord te staan.</p>
+                  <p>Indien gewenst kunt u een bericht via Whatsapp insturen. Ik bel u zo spoedig mogelijk terug.</p>
+                  <p>Ook is het mogelijk om via <a href="https://www.facebook.com/ronald.follong" target="_blank" rel="noopener noreferrer" className="text-primary underline-offset-4 underline hover:text-primary/90">Facebook</a> u vraag te stellen.</p>
+                  <p>Opmerkingen zijn eveneens welkom!</p>
                 </div>
               </div>
 

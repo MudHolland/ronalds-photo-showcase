@@ -69,14 +69,14 @@ const ContactForm = () => {
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
-        <Label htmlFor="name">Name</Label>
+        <Label htmlFor="name">Voor- en achternaam</Label>
         <Input
           id="name"
           name="name"
           value={formData.name}
           onChange={handleChange}
           className="mt-1"
-          placeholder="Your name"
+          placeholder="Je voor- en achternaam"
         />
         {errors.name && (
           <p className="text-sm text-destructive mt-1">{errors.name}</p>
@@ -84,7 +84,7 @@ const ContactForm = () => {
       </div>
 
       <div>
-        <Label htmlFor="email">Email Address</Label>
+        <Label htmlFor="email">Emailadres</Label>
         <Input
           id="email"
           name="email"
@@ -92,7 +92,7 @@ const ContactForm = () => {
           value={formData.email}
           onChange={handleChange}
           className="mt-1"
-          placeholder="your.email@example.com"
+          placeholder="jouw.email@voorbeeld.nl"
         />
         {errors.email && (
           <p className="text-sm text-destructive mt-1">{errors.email}</p>
@@ -100,14 +100,14 @@ const ContactForm = () => {
       </div>
 
       <div>
-        <Label htmlFor="subject">Subject</Label>
+        <Label htmlFor="subject">Onderwerp</Label>
         <Input
           id="subject"
           name="subject"
           value={formData.subject}
           onChange={handleChange}
           className="mt-1"
-          placeholder="What is this about?"
+          placeholder="Waar wil je het over hebben?"
         />
         {errors.subject && (
           <p className="text-sm text-destructive mt-1">{errors.subject}</p>
@@ -115,14 +115,14 @@ const ContactForm = () => {
       </div>
 
       <div>
-        <Label htmlFor="message">Message</Label>
+        <Label htmlFor="message">Bericht</Label>
         <Textarea
           id="message"
           name="message"
           value={formData.message}
           onChange={handleChange}
           className="mt-1 min-h-[150px]"
-          placeholder="Your message..."
+          placeholder="Laat me weten wat ik voor je kan doen."
         />
         {errors.message && (
           <p className="text-sm text-destructive mt-1">{errors.message}</p>
@@ -130,7 +130,7 @@ const ContactForm = () => {
       </div>
 
       <Button type="submit" disabled={isSubmitting} className="w-full">
-        {isSubmitting ? "Sending..." : "Send Message"}
+        {isSubmitting ? "Sending..." : "Verstuur bericht"}
       </Button>
     </form>
   );

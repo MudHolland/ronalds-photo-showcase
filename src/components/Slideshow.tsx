@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import slideshow1 from "@/assets/slideshow-1.jpg";
-import slideshow2 from "@/assets/slideshow-2.jpg";
-import slideshow3 from "@/assets/slideshow-3.jpg";
-import slideshow4 from "@/assets/slideshow-4.jpg";
-import slideshow5 from "@/assets/slideshow-5.jpg";
+import slideshow1 from "@/assets/wendy10-2-slide.jpg";
+import slideshow2 from "@/assets/2016_08_20_999_52-2-slide.jpg";
+import slideshow3 from "@/assets/2015_08_01_999_169-2-slide.jpg";
+import slideshow4 from "@/assets/2014_10_26_999_49-2-slide.jpg";
+import slideshow5 from "@/assets/2014_10_04_999_139-2-slide.jpg";
 
 const slides = [slideshow1, slideshow2, slideshow3, slideshow4, slideshow5];
 
@@ -44,7 +44,7 @@ const Slideshow = () => {
           <img
             src={slide}
             alt={`Slide ${index + 1}`}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-top blur-sm"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
         </div>
