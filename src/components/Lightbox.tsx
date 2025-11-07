@@ -32,8 +32,8 @@ const Lightbox = ({ images, initialIndex, onClose }: LightboxProps) => {
 
   return (
     <div 
-      className="fixed inset-0 z-50 bg-black/95 flex flex-col"
-      onClick={onClose}
+  className="fixed inset-0 z-50 bg-black/95 flex flex-col h-screen overflow-hidden"
+  onClick={onClose}
     >
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-border" onClick={(e) => e.stopPropagation()}>
@@ -46,13 +46,13 @@ const Lightbox = ({ images, initialIndex, onClose }: LightboxProps) => {
       </div>
 
       {/* Main Image */}
-      <div className="flex-1 relative flex items-center justify-center p-4">
-        <img
-          src={images[currentIndex]}
-          alt={`Image ${currentIndex + 1}`}
-          className="max-w-full max-h-[calc(100vh-200px)] object-contain"
-          onClick={(e) => e.stopPropagation()}
-        />
+<div className="flex-1 relative flex items-center justify-center p-4 overflow-hidden">
+  <img
+    src={images[currentIndex]}
+    alt={`Image ${currentIndex + 1}`}
+    className="max-w-full max-h-full object-contain"
+    onClick={(e) => e.stopPropagation()}
+  />
 
         {/* Navigation Arrows */}
         <Button
@@ -81,8 +81,11 @@ const Lightbox = ({ images, initialIndex, onClose }: LightboxProps) => {
       </div>
 
       {/* Thumbnail Strip */}
-      <div className="border-t border-border p-4 overflow-x-auto" onClick={(e) => e.stopPropagation()}>
-        <div className="flex gap-2 justify-center">
+<div
+  className="border-t border-border p-4 overflow-x-auto flex-shrink-0"
+  onClick={(e) => e.stopPropagation()}
+>
+  <div className="flex gap-2 justify-center">
           {images.map((image, index) => (
             <button
               key={index}
