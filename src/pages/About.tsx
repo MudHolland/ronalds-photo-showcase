@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import ronaldPortrait from "@/assets/ronald-medium.jpg";
+import ronaldPortrait from "/assets/ronald-medium.jpg";
 
 const About = () => {
   return (
