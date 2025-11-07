@@ -36,12 +36,12 @@ const Lightbox = ({ images, initialIndex, onClose }: LightboxProps) => {
   onClick={onClose}
     >
       {/* Header */}
-      <div className="flex items-center justify-between p-4 border-b border-border" onClick={(e) => e.stopPropagation()}>
+      <div className="flex items-center justify-between p-4 border-border" onClick={(e) => e.stopPropagation()}>
         <span className="text-sm text-muted-foreground">
           {currentIndex + 1} / {images.length}
         </span>
         <Button variant="ghost" size="icon" onClick={onClose}>
-          <X className="h-5 w-5" />
+          <X className="h-5 w-5 stroke-white" />
         </Button>
       </div>
 
@@ -58,7 +58,7 @@ const Lightbox = ({ images, initialIndex, onClose }: LightboxProps) => {
         <Button
           variant="ghost"
           size="icon"
-          className="absolute left-4 top-1/2 -translate-y-1/2 bg-background/20 hover:bg-background/40 backdrop-blur-sm"
+          className="absolute left-4 top-1/2 -translate-y-1/2 bg-background/20 hover:bg-background/40 dark:hover:bg-background backdrop-blur-sm hover:text-white"
           onClick={(e) => {
             e.stopPropagation();
             goToPrevious();
@@ -70,7 +70,7 @@ const Lightbox = ({ images, initialIndex, onClose }: LightboxProps) => {
         <Button
           variant="ghost"
           size="icon"
-          className="absolute right-4 top-1/2 -translate-y-1/2 bg-background/20 hover:bg-background/40 backdrop-blur-sm"
+          className="absolute right-4 top-1/2 -translate-y-1/2 bg-background/20 hover:bg-background/40 dark:hover:bg-background backdrop-blur-sm hover:text-white"
           onClick={(e) => {
             e.stopPropagation();
             goToNext();
@@ -82,7 +82,7 @@ const Lightbox = ({ images, initialIndex, onClose }: LightboxProps) => {
 
       {/* Thumbnail Strip */}
 <div
-  className="border-t border-border p-4 overflow-x-auto flex-shrink-0"
+  className="border-border p-4 overflow-x-auto flex-shrink-0"
   onClick={(e) => e.stopPropagation()}
 >
   <div className="flex gap-2 justify-center">
