@@ -33,7 +33,7 @@ const Slideshow = () => {
   };
 
   return (
-    <div className="relative w-full h-[calc(100vh-80px)] overflow-hidden">
+    <div className="relative w-full h-[calc(100vh)] overflow-hidden">
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -44,9 +44,9 @@ const Slideshow = () => {
           <img
             src={slide}
             alt={`Slide ${index + 1}`}
-            className="w-full h-full object-cover object-top blur-sm"
+            className="w-full h-full object-cover object-top"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/50 via-background/20 to-background/20" />
         </div>
       ))}
 
@@ -91,7 +91,7 @@ const Slideshow = () => {
           Ronald Follong Fotografie
         </h1>
         <p className="text-lg md:text-xl text-muted-foreground">
-          Capturing moments, creating memories
+          Tijdloze beelden van onvergetelijke momenten
         </p>
       </div>
     </div>

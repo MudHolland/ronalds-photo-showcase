@@ -1,4 +1,6 @@
 import { Mail, Phone, Facebook, Linkedin, Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
+import logo from "@/assets/logo-square.png";
 
 const Footer = () => {
   return (
@@ -6,14 +8,18 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-foreground">Ronald Follong Fotografie</h3>
-            <p className="text-sm text-muted-foreground">
-              Professional photography portfolio showcasing the finest moments captured through the lens.
+            <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
+            <img src={logo} alt="Ronald Follong Fotografie" className="h-12" />
+            <p className="font-black text-md uppercase text-foreground -ml-4 tracking-tighter">Ronald Follong</p>
+          </Link>
+            {/* <h3 className="text-lg font-semibold mb-4 text-foreground">Ronald Follong Fotografie</h3> */}
+            <p className="text-sm text-muted-foreground mt-4">
+              Mijn professionele fotografieportfolio waarin ik toon hoe ik jouw mooiste momenten vastleg door de cameralens.
             </p>
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-foreground">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4 text-foreground">Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="/" className="text-muted-foreground hover:text-primary transition-colors">
@@ -43,11 +49,11 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Mail size={16} className="text-primary" />
-                <span>info@ronaldfollongfotografie.nl</span>
+                <span><a className="hover:text-primary hover:underline transition-colors" href="mailto:info@ronaldfollongfotografie.nl">info@ronaldfollongfotografie.nl</a></span>
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Phone size={16} className="text-primary" />
-                <span>+31 6 12345678</span>
+                <span><a className="hover:text-primary hover:underline transition-colors" href="tel:+31629593683">+31 (0) 6 29 59 36 83</a></span>
               </div>
               <div className="flex items-center gap-3 mt-4">
                 <a 

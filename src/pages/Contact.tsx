@@ -48,10 +48,10 @@ const Contact = () => {
                       <div>
                         <h3 className="font-medium text-foreground">Telefoon</h3>
                         <a
-                          href="tel:+31612345678"
+                          href="tel:+31629593683"
                           className="text-muted-foreground hover:text-primary transition-colors"
                         >
-                          +31 6 12345678
+                          +31 (0) 6 29 59 36 83
                         </a>
                       </div>
                     </div>
